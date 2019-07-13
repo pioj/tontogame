@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lista:
   - tipo: 0
-    _cant: 1000
+    _cant: 300
   - tipo: 1
     _cant: 75

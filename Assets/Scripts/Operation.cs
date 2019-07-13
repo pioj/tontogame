@@ -2,7 +2,7 @@
 
 public class Operation : MonoBehaviour
 {
-    [SerializeField] private SO_Recursos reqAsset;
+     private SO_Recursos reqAsset;
     [SerializeField] private bool ready = false;
 
 
@@ -19,7 +19,8 @@ public class Operation : MonoBehaviour
         }
         else {
             ready = false;
-            reqAsset = GameDATA.reqAsset;
+            reqAsset = FindObjectOfType<GameDATA>().reqAsset;
+            ready = true;
         }
     }
 

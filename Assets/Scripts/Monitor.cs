@@ -3,7 +3,8 @@
 public class Monitor : MonoBehaviour
 {
 
-    [SerializeField] private SO_Recursos reqAsset;
+    private SO_Recursos reqAsset;
+    [SerializeField] private bool ready = false;
 
     [Header("Recursos")]
     [Range(0, 999999)] [SerializeField] private uint Metal;
@@ -19,22 +20,28 @@ public class Monitor : MonoBehaviour
     {
         if (reqAsset != null && reqAsset.lista.Count > 0)
         {
-            foreach (var rec in reqAsset.lista)
+            if (ready == true)
             {
-                if (rec.tipo == eRecurso.METAL) Metal = rec.cantidad;
-                if (rec.tipo == eRecurso.CRISTAL) Cristal = rec.cantidad;
-                if (rec.tipo == eRecurso.DEUTERIO) Deuterio = rec.cantidad;
+                foreach (var rec in reqAsset.lista)
+                {
+                    if (rec.tipo == eRecurso.METAL) Metal = rec.cantidad;
+                    if (rec.tipo == eRecurso.CRISTAL) Cristal = rec.cantidad;
+                    if (rec.tipo == eRecurso.DEUTERIO) Deuterio = rec.cantidad;
+                }
             }
+            
         }
         else {
-            reqAsset = GameDATA.reqAsset;
+            ready = false;
+            reqAsset = FindObjectOfType<GameDATA>().reqAsset;
+            ready = true;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("OnEnable", 1f, 1f);
+        InvokeRepeating("OnEnable", 1f, 0.4f);
     }
 
     

@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class Monitor : MonoBehaviour
 {
 
     private SO_Recursos reqAsset;
     [SerializeField] private bool ready = false;
-
+    
     [Header("Recursos")]
     [Range(0, 999999)] [SerializeField] private uint Metal;
     [Range(0, 999999)] [SerializeField] private uint Cristal;
     [Range(0, 999999)] [SerializeField] private uint Deuterio;
+
+    [Space]
+    [SerializeField] private List<AvailableConstruc> ConstruccionesDisponibles = new List<AvailableConstruc>();
 
     void OnDisable()
     {

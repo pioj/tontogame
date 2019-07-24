@@ -3,6 +3,7 @@
 public class GameDATA : MonoBehaviour
 {
     public SO_Recursos reqAsset;
+    public SO_Construcciones consAsset;
 
     private SaveManager saveman;
     private TimeManager timeman;

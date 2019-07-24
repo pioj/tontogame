@@ -6,20 +6,27 @@ public class AvailableConstruc {
     public string Nombre;
     public E_Construccion Categoria;
     public uint Restantes;
-    public List<Requisito> Requisitos;
     public uint MaxLevel;
 
+    public List<object> Requisitos;
 
-    public AvailableConstruc(E_Construccion cat, string nom = "Mina de Metal", uint max = 99) {
+
+    public AvailableConstruc(E_Construccion cat, List<object> Reqs, string nom = "Mina de Metal", uint max = 99) {
+        Categoria = cat;
+        Nombre = nom;
+        MaxLevel = max;
+        Requisitos = new List<object>(Reqs);
+    }
+
+    public AvailableConstruc(E_Construccion cat,  string nom = "Mina de Metal", uint max = 99)
+    {
         Categoria = cat;
         Nombre = nom;
         MaxLevel = max;
     }
 
-    public AvailableConstruc(E_Construccion cat, List<Requisito> lista, string nom = "Mina de Metal", uint max = 99 ) {
-        Categoria = cat;
-        Nombre = nom;
-        MaxLevel = max;
-        Requisitos = new List<Requisito>(lista);
+    public void Reducce() {
+        Restantes--;
     }
+
 }

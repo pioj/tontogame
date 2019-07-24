@@ -112,7 +112,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &830197144
+--- !u!1 &1051096062
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,10 +120,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 830197148}
-  - component: {fileID: 830197147}
-  - component: {fileID: 830197146}
-  - component: {fileID: 830197145}
+  - component: {fileID: 1051096065}
+  - component: {fileID: 1051096064}
+  - component: {fileID: 1051096063}
   m_Layer: 0
   m_Name: GAMU
   m_TagString: Untagged
@@ -131,26 +130,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &830197145
+--- !u!114 &1051096063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830197144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78ae45d91d000647a83af31519aa0b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ready: 0
---- !u!114 &830197146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830197144}
+  m_GameObject: {fileID: 1051096062}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 154650b5f7e31ee49be0c746b17253a3, type: 3}
@@ -160,31 +146,28 @@ MonoBehaviour:
   Metal: 0
   Cristal: 0
   Deuterio: 0
-  ConstruccionesDisponibles:
-  - Nombre: 
-    Categoria: 0
-    Restantes: 0
-    MaxLevel: 0
---- !u!114 &830197147
+  ConstruccionesDisponibles: []
+--- !u!114 &1051096064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830197144}
+  m_GameObject: {fileID: 1051096062}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f0b30a19e614d64cb392e4666331fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reqAsset: {fileID: 11400000, guid: 01fbeb4d9d720a64b8ed76dc40d06865, type: 2}
---- !u!4 &830197148
+  consAsset: {fileID: 11400000, guid: 74bf77c8ba0c97e41abd436567fa14b0, type: 2}
+--- !u!4 &1051096065
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830197144}
+  m_GameObject: {fileID: 1051096062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -192,7 +175,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2088556601
+--- !u!1 &2000027978
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,9 +183,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2088556604}
-  - component: {fileID: 2088556603}
-  - component: {fileID: 2088556602}
+  - component: {fileID: 2000027981}
+  - component: {fileID: 2000027980}
+  - component: {fileID: 2000027979}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -210,21 +193,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2088556602
+--- !u!81 &2000027979
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088556601}
+  m_GameObject: {fileID: 2000027978}
   m_Enabled: 1
---- !u!20 &2088556603
+--- !u!20 &2000027980
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088556601}
+  m_GameObject: {fileID: 2000027978}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -260,13 +243,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &2088556604
+--- !u!4 &2000027981
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088556601}
+  m_GameObject: {fileID: 2000027978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}

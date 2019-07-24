@@ -139,8 +139,8 @@ public class Unidad {
 #region Edificios y Construcciones
 
 public class ConstructParent {
-    public E_Construccion Categoria;
     public string Nombre;
+    public E_Construccion Categoria;
     public uint Level;
 
     public void SetLevel(uint newlevel) {
